@@ -14,9 +14,9 @@
 ### PLACE kettle on stovetopBurner
 ### LIGHT stovetopBurner, adjust to medium heat
 ### IF kettle.whistle exists 
-#### LISTEN for kettle.whistle
+##### LISTEN for kettle.whistle
 ### ELSE
-#### TIME kettle for 3 minutes
+##### TIME kettle for 3 minutes
 ### TURNOFF stovetopBurner
 ### PICKUP kettle from the handle
 ### POUR kettle.water into cup to fill up to the brim of cup
@@ -36,9 +36,9 @@
 ## REMOVE teaPacket.satchel
 ## PLACE teaPackect.satchel into trashCan
 ## IF taste is sweet
-### ADD sugar to cup
+#### ADD sugar to cup
 ## IF taste is creamy
-### ADD milk to cup
+#### ADD milk to cup
 ## STIR with spoon
 ## REMOVE spoon
 ## DRINK tea

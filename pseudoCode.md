@@ -21,6 +21,7 @@
 #### &emsp; &emsp; teaPacket.Satchel
 ### faucet
 #### &emsp; -dispenses water into the kettle/cup
+#### &emsp; -Starts with infinite Water
 #### Properties
 #### &emsp; &emsp; faucet.Location
 #### &emsp; &emsp; faucet.Water 
@@ -46,7 +47,8 @@
 #### &emsp; &emsp; microwave.Location
 #### &emsp; &emsp; microwave.Time
 ### counter
-#### &emsp; -Used to place objects
+#### &emsp; -Used to for a flat surface to hold objects
+#### &emsp; -Not generally heat resistant, but in this case it is not being afftected by the heat from the hot kettle 
 #### &emsp; Properties
 #### &emsp; &emsp; counter.Location
 ### trashcan
@@ -64,54 +66,61 @@
 ### &emsp;
 
 ## Functionality
-#### PLACE (object1, object2)
-##### &emsp; Given two objects and places object1 onto object2
-#### POUR (object1, object2)
-##### &emsp; Sets object2.Water to object1.Water
-##### &emsp; Sets object1.Water to 0
-#### LIGHT (object, state)
-##### &emsp; Changes object to given state
-#### TIME (number)
-##### &emsp; Sets a delay in the process for number amount
-#### LISTEN (object)
-##### &emsp; Runs a while loop until object makes a noise
-##### &emsp; Checking if kettle.Whistle becomes true
-
-## IF stovetopBurner is true {
-### &emsp; POUR faucet 
-### &emsp; PLACE kettle on stovetopBurner
-### &emsp; LIGHT stovetopBurner, adjust to medium heat
-### &emsp; IF kettle.whistle exists 
+### PLACE (object1, object2)
+#### &emsp; Given two objects and places object1 onto object2
+### POUR (object1, object2)
+#### &emsp; Sets object2.Water to object1.Water
+#### &emsp; Sets object1.Water to 0
+### LIGHT (object, state)
+#### &emsp; Changes object to given state
+### TIME (number)
+#### &emsp; Sets a delay in the process for number amount
+### LISTEN (object)
+#### &emsp; Runs a while loop until object makes a noise
+#### &emsp; Checking if kettle.Whistle becomes true
+### STIR 
+#### &emsp; Places spoon into cup
+#### &emsp; Runs a loop moving spoon position in small circles
+#### &emsp; Places spoon onto counter
+### &emsp;
+## START
+### IF stovetopBurner is true {
+#### &emsp; PLACE kettle under faucet     
+#### &emsp; POUR faucet into kettle
+#### &emsp; PLACE kettle on stovetopBurner
+#### &emsp; LIGHT stovetopBurner, adjust to medium heat
+#### &emsp; IF kettle.whistle exists 
 ##### &emsp; &emsp; LISTEN kettle.Whistle
-### &emsp; ELSE
+#### &emsp; ELSE
 ##### &emsp; &emsp; TIME kettle for 3 minutes
-### &emsp; LIGHT stovetopBurner to off
-### &emsp; PLACE kettle.Sprout over cup
-### &emsp; POUR kettle.Water into cup to fill up to the brim of cup
-### &emsp; PLACE kettle onto stovetopBurner
-### }
+#### &emsp; LIGHT stovetopBurner to off
+#### &emsp; PLACE kettle.Sprout over cup
+#### &emsp; POUR kettle.Water into cup to fill up to the brim of cup
+#### &emsp; PLACE kettle onto stovetopBurner
+#### &emsp; }
+### &emsp;
 
-## ELSE stovetopBurner is false {
-### &emsp; FILL cup from faucet with water to desired drinking amount
-### &emsp; PLACE cup in microwave
-### &emsp; SET microwave for 2 minutes
-### &emsp; LIGHT microwave to on
-### &emsp; PLACE cup put on counter
-###  &emsp;} 
-## OPEN teaPacket
-## PLACE teaPacket.satchel in cup
-## PLACE teaPacket in garbageCan
-## TIME 2 minutes
-## REMOVE teaPacket.satchel
-## PLACE teaPackect.satchel into trashcan
-## IF taste.Sweet
+### ELSE stovetopBurner is false {
+#### &emsp; FILL cup from faucet with water to desired drinking amount
+#### &emsp; PLACE cup in microwave
+#### &emsp; LIGHT microwave to on 
+#### &emsp; TIME microwave for 2 minutes
+#### &emsp; LIGHT microwave to off
+#### &emsp; PLACE cup put on counter
+####  &emsp;} 
+#### &emsp;
+### OPEN teaPacket
+### PLACE teaPacket.satchel in cup
+### PLACE teaPacket in garbageCan
+### TIME 2 minutes
+### PLACE teaPackect.satchel into trashcan
+### IF taste.Sweet
 #### &emsp; PLACE sugar into cup
-## IF taste.Creamy
+### IF taste.Creamy
 #### &emsp; PLACE milk into cup
-## IF taste.Honey
+### IF taste.Honey
 #### &emsp; PLACE honey into cup
-## STIR with spoon
-## PLACE spoon onto counter
-## DRINK tea
-## REALIZE tea is just hot brown water
-
+### STIR with spoon
+### DRINK tea
+### REALIZE tea is just hot brown water
+## End

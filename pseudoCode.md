@@ -28,7 +28,36 @@
 #### &emsp; &emsp; cup.Location
 ### spoon
 #### &emsp; -Used to mix the tea mixture for an even taste
- stovetopBurner, microwave, counter, trashCan, taste, sugar, milk
+#### Properties 
+#### &emsp; &emsp; -spoon.Stir
+### stovetopBurner
+#### &emsp; -Used to heat up the kettle
+#### &emsp; -Has 3 heat settings; High, medium, and low
+#### &emsp; Properties
+#### &emsp; &emsp; stovetopBurner.Heat
+#### &emsp; &emsp; stovetopBurner.Loctation
+#### &emsp; &emsp; stovetopBurner.Exists
+### microwave
+#### &emsp; -Will be uses to heat up the water directly in the cup if stovetopBurner doesn't exists
+#### &emsp; -No heat setting, only on or off
+#### &emsp; Properties
+#### &emsp; &emsp; microwave.Location
+#### &emsp; &emsp; microwave.Time
+### counter
+#### &emsp; -Used to place objects
+#### &emsp; Properties
+#### &emsp; &emsp; counter.Location
+### trashCan
+#### &emsp; -A waster holder
+#### &emsp; -Used for throwing things away
+#### &emsp; Properties
+#### &emsp; &emsp; trashCan.Location
+### taste
+#### &emsp; -Holds boolean attributes
+#### &emsp; -Descriptors: Sweet, Creamy
+#### &emsp; Properties
+#### &emsp; &emsp; taste.Sweet 
+sugar, milk
 
 ## OPEN teaPacket
 &emsp;

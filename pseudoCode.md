@@ -1,11 +1,15 @@
 # How to brew a cup of tea
+
 ## ABOUT: 
 ### These instructions will list the basic steps needed to brew a cup of tea with a kettle.
 ### Tea can either be a calming effect or caffienated depending on the leaves used.
 ### To infuse the hot water with tea, a prepackaged  satchel or loose leaf in a metal mesh containter
 &emsp;
+
 #### ASSUMED: Access to water, stovetop/microwave, tea packet, cup, basic physical dexterity, and immunity to heat.
+
 ##### &emsp;
+
 ## INTIALIZE 
 ### kettle
 #### &emsp; -Holds the water to be heated
@@ -63,14 +67,15 @@
 #### &emsp; &emsp; taste.Creamy
 #### &emsp; &emsp; taste.Honey
 #### &emsp; &emsp; taste.Calm
+
 ### &emsp;
 
 ## Functionality
 ### PLACE (object1, object2)
 #### &emsp; Given two objects and places object1 onto object2
-### POUR (object1, object2)
+### POUR (object1, object2, number)
 #### &emsp; Sets object2.Water to object1.Water
-#### &emsp; Sets object1.Water to 0
+#### &emsp; Detracts number from object1.Water
 ### LIGHT (object, state)
 #### &emsp; Changes object to given state
 ### TIME (number)
@@ -82,11 +87,13 @@
 #### &emsp; Places spoon into cup
 #### &emsp; Runs a loop moving spoon position in small circles
 #### &emsp; Places spoon onto counter
+
 ### &emsp;
+
 ## START
 ### IF stovetopBurner is true {
-#### &emsp; PLACE kettle under faucet     
-#### &emsp; POUR faucet into kettle
+#### &emsp; PLACE kettle under faucet t    
+#### &emsp; POUR faucet into kettle to desired amount
 #### &emsp; PLACE kettle on stovetopBurner
 #### &emsp; LIGHT stovetopBurner, adjust to medium heat
 #### &emsp; IF kettle.whistle exists 
@@ -95,20 +102,23 @@
 ##### &emsp; &emsp; TIME kettle for 3 minutes
 #### &emsp; LIGHT stovetopBurner to off
 #### &emsp; PLACE kettle.Sprout over cup
-#### &emsp; POUR kettle.Water into cup to fill up to the brim of cup
+#### &emsp; POUR kettle into cup desired amount
 #### &emsp; PLACE kettle onto stovetopBurner
 #### &emsp; }
+
 ### &emsp;
 
 ### ELSE stovetopBurner is false {
-#### &emsp; FILL cup from faucet with water to desired drinking amount
+#### &emsp; Pour fuacet into cup to desired amount
 #### &emsp; PLACE cup in microwave
 #### &emsp; LIGHT microwave to on 
 #### &emsp; TIME microwave for 2 minutes
 #### &emsp; LIGHT microwave to off
 #### &emsp; PLACE cup put on counter
 ####  &emsp;} 
+
 #### &emsp;
+
 ### OPEN teaPacket
 ### PLACE teaPacket.satchel in cup
 ### PLACE teaPacket in garbageCan

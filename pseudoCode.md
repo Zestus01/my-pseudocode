@@ -57,7 +57,11 @@
 #### &emsp; -Descriptors: Sweet, Creamy
 #### &emsp; Properties
 #### &emsp; &emsp; taste.Sweet 
-sugar, milk
+#### &emsp; &emsp; taste.Creamy
+
+## Functionality
+
+
 
 ## OPEN teaPacket
 &emsp;

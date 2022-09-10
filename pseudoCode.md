@@ -1,10 +1,37 @@
-# ABOUT: These instructions will list the basic steps needed to brew a cup of tea with a kettle. 
-##### ASSUMED: Access to water, stovetop/microwave, tea leaves, cup, and basic physical dexterity 
+# How to brew a cup of tea
+## ABOUT: 
+### These instructions will list the basic steps needed to brew a cup of tea with a kettle.
+### Tea can either be a calming effect or caffienated depending on the leaves used.
+### To infuse the hot water with tea, a prepackaged  satchel or loose leaf in a metal mesh containter
 
-## INTIALIZE kettle, teaPacket, faucet, cup, spoon, stovetopBurner, microwave, counter, trashCan, taste, sugar, milk
+#### ASSUMED: Access to water, stovetop/microwave, tea leaves, cup, and basic physical dexterity 
+
+## INTIALIZE 
+### kettle
+#### &emsp; -Holds the water to be heated
+#### &emsp; -Will be used if stovetopBurner exists
+#### &emsp; Properties
+#### &emsp; &emsp; kettle.Water
+#### &emsp; &emsp; kettle.Sprout
+### teaPacket
+#### &emsp; -Can either be loose tea leaves or prepackaged 
+#### &emsp; -In this insance a prepackaged will be used 
+#### &emsp;  Properties
+#### &emsp; &emsp; teaPacket.Satchel
+### faucet
+#### &emsp; -dispenses water into the kettle/cup
+#### Properties
+#### &emsp; &emsp; faucet.Location
+### cup
+#### &emsp; -Will hold the final product
+#### &emsp; Porperties
+#### &emsp; &emsp; cup.Location
+### spoon
+#### &emsp; -Used to mix the tea mixture for an even taste
+ stovetopBurner, microwave, counter, trashCan, taste, sugar, milk
 
 ## OPEN teaPacket
-
+&emsp;
 
 ## IF stovetopBurner exists {
 ### PLACE teaPacket.satchel in cup
